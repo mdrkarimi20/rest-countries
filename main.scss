@@ -72,7 +72,8 @@ body {
     .calling-code-value {
         @extend %flex;
         width: 100%;
-        height: 200px;
+        height: 159px;
+        font-size: 50px;
         color: $color-tertiary;
     }
 }
@@ -81,9 +82,9 @@ body {
     @extend %flex;
     background-color: $color-secondary;
     height: 230px;
-    #Flag-image {
-        width: 90%;
-        height: 90%;
+    #flag-image {
+        width: 95%;
+        height: 95%;
     }
 }
 
