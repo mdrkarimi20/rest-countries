@@ -69,8 +69,6 @@ $(document).ready(function() {
                 $("#temperature").text(Math.round(response.main.temp - 273));
                 $("#humidity").text(response.main.humidity);
                 $("#visibility").text(response.visibility);
-
-                console.log(response);
             });
         });
     });
