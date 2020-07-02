@@ -2,6 +2,11 @@
     font-family: "american";
 }
 
+%flex {
+    display: flex;
+    justify-content: center;
+}
+
 html,
 body {
     width: 100%;
@@ -11,6 +16,14 @@ body {
 }
 
 .api-country {
-    display: flex;
-    justify-content: center;
+    @extend %flex;
+}
+
+.header {
+    text-align: center;
+    background-color: black;
+}
+
+.text-header {
+    color: #ffa115;
 }
