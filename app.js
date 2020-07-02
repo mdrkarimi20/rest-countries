@@ -55,6 +55,23 @@ $(document).ready(function() {
                     open: true,
                 },
             });
+
+            $.ajax({
+                url: `https://api.openweathermap.org/data/2.5/weather?q=${res.capital}&appid=57a999dfc92ad8855f3b5bcd69cfce3b`,
+                method: "GET",
+            }).done(function(response) {
+                $(".image-weather").attr(
+                    "src",
+                    `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+                );
+                $(".main-weather").text(response.weather[0].main);
+                $("#wind").text(response.wind.speed);
+                $("#temperature").text(Math.round(response.main.temp - 273));
+                $("#humidity").text(response.main.humidity);
+                $("#visibility").text(response.visibility);
+
+                console.log(response);
+            });
         });
     });
 });
