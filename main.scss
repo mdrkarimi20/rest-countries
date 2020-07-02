@@ -3,7 +3,7 @@ $color-secondary: white;
 $color-tertiary: black;
 $color-fourthary: #fff6f6;
 $color-Fifth: #303030;
-$color-sixth: #bdbdbd;
+$color-sixth: #eaeaea;
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -40,9 +40,8 @@ body {
 #information {
     @extend %flex;
     justify-content: space-around;
-    background-color: $color-fourthary;
+    background-color: $color-sixth;
     #information-text {
-        width: 33%;
         height: 230px;
         @extend %flex;
         flex-direction: column;
@@ -61,7 +60,6 @@ body {
 #calling-code {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
-    width: 33%;
     height: 230px;
     background-color: $color-primary;
     .calling-code-text {
@@ -82,10 +80,49 @@ body {
 #flag {
     @extend %flex;
     background-color: $color-secondary;
-    width: 33%;
     height: 230px;
     #Flag-image {
         width: 90%;
         height: 90%;
+    }
+}
+
+#weather {
+    width: 33%;
+    height: 400px;
+    background-color: $color-secondary;
+    .text-weather {
+        @extend %flex;
+        color: $color-primary;
+        width: 100%;
+        height: 50px;
+        background-color: $color-Fifth;
+    }
+    .box-image {
+        @extend %flex;
+        flex-direction: column;
+        color: $color-tertiary;
+        width: 100%;
+        height: 150px;
+        .image-weather {
+            width: 100px;
+        }
+    }
+    .value-weather {
+        @extend %flex;
+        align-items: start;
+        flex-direction: column;
+        color: $color-tertiary;
+        width: 100%;
+        height: 200px;
+    }
+}
+
+#map {
+    width: 66%;
+    height: 400px;
+    .show-map {
+        width: 100%;
+        height: 100%;
     }
 }
