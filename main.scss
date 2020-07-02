@@ -1,3 +1,9 @@
+$color-primary: #ffa115;
+$color-secondary: white;
+$color-tertiary: black;
+$color-fourthary: #fff6f6;
+$color-Fifth: #424242;
+$color-sixth: #bdbdbd;
 * {
     font-family: "american";
 }
@@ -17,13 +23,34 @@ body {
 
 .api-country {
     @extend %flex;
+    .header {
+        text-align: center;
+        background-color: $color-tertiary;
+        .text-header {
+            color: $color-primary;
+        }
+        #select-country {
+            width: 50%;
+        }
+    }
 }
 
-.header {
-    text-align: center;
-    background-color: black;
-}
-
-.text-header {
-    color: #ffa115;
+#information {
+    @extend %flex;
+    justify-content: space-between;
+    background-color: $color-fourthary;
+    #information-text {
+        width: 33%;
+        height: 230px;
+        @extend %flex;
+        flex-direction: column;
+        background-color: $color-Fifth;
+        color: $color-secondary;
+        .information-texts {
+            color: $color-primary;
+            .value-information {
+                color: $color-secondary;
+            }
+        }
+    }
 }
